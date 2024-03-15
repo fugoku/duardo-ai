@@ -1,14 +1,15 @@
-# Very simple docker-compose file to run the app on http://localhost:3000 (or http://127.0.0.1:3000).
-#
-# For more examples, such runnin duardo-ai alongside a web browsing service, see the `docs/docker` folder.
-
-version: '3.9'
+version: '3.8'
 
 services:
   duardo-ai:
-    image: ghcr.io/fugoku/duardo-ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    env_file:
-      - .env
-    command: [ "next", "start", "-p", "3000" ]
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm start
