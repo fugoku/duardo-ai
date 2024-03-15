@@ -218,7 +218,7 @@ export const useModelsStore = create<LlmsStore>()(
 
       setOpenRoutersKey: (key: string) =>
         set(state => {
-          const openRouterSource = state.sources.find(source => source.vId === 'openrouter');
+          const openRouterSource = state.sources.find(source => source.vId === 'anthropic');
           if (!openRouterSource) return state;
           return {
             sources: state.sources.map(source => source.id === openRouterSource.id

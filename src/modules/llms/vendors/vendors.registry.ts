@@ -17,18 +17,18 @@ import { DLLMId, DModelSource, DModelSourceId, findLLMOrThrow, findSourceOrThrow
 
 export type ModelVendorId =
   | 'anthropic'
-// | 'azure'
-// | 'googleai'
-// | 'groq'
-// | 'lmstudio'
-// | 'localai'
-// | 'mistral'
-// | 'ollama'
-// | 'oobabooga'
-// | 'openai'
-// | 'openrouter'
-// | 'perplexity'
-// | 'togetherai';
+  | 'azure'
+  | 'googleai'
+  | 'groq'
+  | 'lmstudio'
+  | 'localai'
+  | 'mistral'
+  | 'ollama'
+  | 'oobabooga'
+  | 'openai'
+  | 'openrouter'
+  | 'perplexity'
+  | 'togetherai';
 
 /** Global: Vendor Instances Registry **/
 const MODEL_VENDOR_REGISTRY: Record<ModelVendorId, IModelVendor> = {
