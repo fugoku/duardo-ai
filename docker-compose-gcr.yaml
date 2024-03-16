@@ -3,7 +3,7 @@ version: '3.9'
 
 services:
   duardo-ai:
-    image: ghcr.io/fugoku/duardo-ai:latest
+    image: ghcr.io/fugoku/duardo-ai:development
     # ports:
     #   - "3000:3000"
     command: [ "next", "start", "-p", "3000" ]
