@@ -30,8 +30,6 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env
-.env.*
 
 # vercel
 .vercel
@@ -42,3 +40,7 @@ next-env.d.ts
 
 # other
 .idea/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
